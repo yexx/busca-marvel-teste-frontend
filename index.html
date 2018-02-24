@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <!-- https://gateway.marvel.com/v1/public/characters?ts=1&apikey=f385d552e26ca12e91b9147a9c30eb4e&hash=c8d43d5f20c431734474fcdbd3685e53 -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <title>Marvel API</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,900,900i" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="wrapper flex">
+          <h1>Busca Marvel <span>Teste Front-End</span></h1>
+          <h2 class="ta-right">Yeshua Emanuel Braz</h2>
+        </div>
+      </header>
+      <section id="app">
+        <div class="wrapper flex">
+          <label id="search">
+            <span>Nome do Personagem:</span>  
+            <input type="text" placeholder="Digite aqui">        
+          </label>
+          <div id="loader" class="wrapper-table loading">
+            <div class="overflow">
+              <table class="table fixed" cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                  <tr>
+                    <th class="personagem"><span>Personagem</span></th>
+                    <th class="series"><span>Séries</span></th>
+                    <th class="eventos"><span>Eventos</span></th>
+                  </tr>
+                </thead>
+              </table>
+              <table id="heroes" class="table" cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                  <tr>
+                    <th class="personagem"><span>Personagem</span></th>
+                    <th class="series"><span>Séries</span></th>
+                    <th class="eventos"><span>Eventos</span></th>
+                  </tr>
+                </thead>
+                <tbody id="heroestable">
+                  <!-- tabela -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="wrapper-pagination">
+            <button class="prevPage"><</button>
+            <ul class="pagination">
+              <!-- paginas -->
+            </ul>
+            <button class="nextPage">></button>
+          </div>
+        </div>
+
+        <div id="detalhes" class="popup">
+          <span class="backdrop"></span>
+          <div class="popup-content">
+            <a href="#" class="close" title="Fechar">&#10006;</a>
+            <div class="image-wrapper">
+              <img src="" alt="" width="300" height="450"/>
+              <header>
+                <h1 class="nome">Name</h1>
+                <p class="universe">(universe)</p>
+              </header>
+            </div>
+            <div class="text-content">
+              <p class="desc">Description</p>
+              <div class="series">
+                <h3>Séries</h3>
+                <ul>
+                  <li>Series</li>
+                  <li>Series</li>
+                  <li>Series</li>
+                </ul>
+              </div>
+              <div class="events">
+                <h3>Eventos</h3>
+                <ul>
+                  <li>Events</li>
+                  <li>Events</li>
+                  <li>Events</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+    </main>
+    <script src="js/app.js" defer></script>
+  </body>
+</html>
